@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Data Analyst portfolio case study for the Retail Sales & Profitability Analytics Dashboard built with Microsoft Power BI, Excel, Power Query (M), and DAX." />
+  <title>Retail Sales &amp; Profitability Analytics Dashboard | Data Analyst Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Sticky Navigation -->
+  <header class="navbar" id="top">
+    <div class="container nav-inner">
+      <a href="#top" class="brand">
+        <span class="brand-badge">BI</span>
+        <span class="brand-text">Divyarajsinh Thakor</span>
+      </a>
+      <nav class="nav-links" id="navLinks" aria-label="Primary Navigation">
+        <a href="#overview" class="nav-link">Overview</a>
+        <a href="#kpis" class="nav-link">KPIs</a>
+        <a href="#preview" class="nav-link">Dashboard</a>
+        <a href="#etl" class="nav-link">Data Prep</a>
+        <a href="#dax" class="nav-link">DAX &amp; Insights</a>
+        <a href="#tech" class="nav-link">Tech Stack</a>
+        <a href="https://github.com/DivyarajsinhA/retail-sales-profitability-analytics" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary">GitHub Repo</a>
+      </nav>
+      <button type="button" class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- 1. HERO SECTION -->
+    <section class="hero">
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="container hero-content reveal">
+        <div class="eyebrow">
+          <span class="pulse-dot"></span>
+          <span>Data Analytics Portfolio Case Study</span>
+        </div>
+        <h1 class="hero-title">Retail Sales &amp; Profitability Analytics Dashboard</h1>
+        <p class="hero-subtitle">
+          An end-to-end Business Intelligence solution engineered with <strong>Microsoft Power BI</strong>, <strong>Microsoft Excel</strong>, <strong>Power Query (M)</strong>, and <strong>DAX</strong>—transforming raw omnichannel sales records into an interactive Star Schema decision-support system.
+        </p>
+        <div class="hero-actions">
+          <a href="https://github.com/DivyarajsinhA/retail-sales-profitability-analytics" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.69-3.88-1.54-3.88-1.54-.52-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 5.8 0c2.21-1.49 3.18-1.18 3.18-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.42-2.69 5.39-5.25 5.68.41.36.78 1.06.78 2.14 0 1.54-.01 2.79-.01 3.17 0 .31.21.68.8.56A11.51 11.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
+            <span>View GitHub Repository</span>
+          </a>
+          <a href="#preview" class="btn btn-secondary">Explore Dashboard Preview</a>
+        </div>
+        <div class="hero-meta">
+          <div class="meta-pill">Architecture: <strong>Star Schema (1 Fact + 4 Dimensions)</strong></div>
+          <div class="meta-pill">Tools: <strong>Power BI &bull; Excel &bull; Power Query &bull; DAX</strong></div>
+          <div class="meta-pill status-pill">Data Status: <strong>Placeholders Active (Ready for Export)</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. PROJECT OVERVIEW & BUSINESS OBJECTIVES -->
+    <section class="section" id="overview">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">01 / Overview</span>
+          <h2>Project Overview &amp; Business Objectives</h2>
+          <p class="section-desc">
+            Designed to help retail and commercial leadership move beyond static spreadsheets by unifying sales transactions, product costs, regional targets, and customer segments into a single interactive analytics layer.
+          </p>
+        </div>
+
+        <div class="overview-grid">
+          <article class="card reveal">
+            <div class="card-icon">01</div>
+            <h3>Centralized Revenue &amp; Margin Visibility</h3>
+            <p>Consolidate multi-period sales orders, COGS, and discount records from Microsoft Excel into an automated Power BI reporting model for executive monitoring.</p>
+          </article>
+          <article class="card reveal">
+            <div class="card-icon">02</div>
+            <h3>Discount &amp; Profitability Governance</h3>
+            <p>Evaluate how promotional discounting across product categories impacts net profitability and identify margin compression thresholds.</p>
+          </article>
+          <article class="card reveal">
+            <div class="card-icon">03</div>
+            <h3>Regional &amp; Channel Benchmarking</h3>
+            <p>Compare regional revenue against assigned targets, rank market performance, and track omnichannel contribution across online, mobile, retail, and B2B direct sales.</p>
+          </article>
+          <article class="card reveal">
+            <div class="card-icon">04</div>
+            <h3>Self-Service Executive Filtering</h3>
+            <p>Empower stakeholders with dynamic slicers, Time Intelligence comparisons (YTD, YoY, MoM), and drill-down product tables without manual spreadsheet rework.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. KPI CARDS (PLACEHOLDERS ONLY) -->
+    <section class="section section-alt" id="kpis">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">02 / Executive Metrics</span>
+          <h2>Key Performance Indicators</h2>
+          <p class="section-desc">
+            Core financial and operational KPIs modeled in DAX. Values below are clearly marked placeholders—replace them with your verified Power BI Desktop card outputs once your report is finalized.
+          </p>
+        </div>
+
+        <div class="kpi-grid">
+          <div class="kpi-card reveal">
+            <div class="kpi-top">
+              <span class="kpi-label">Total Revenue</span>
+              <span class="placeholder-badge">Placeholder</span>
+            </div>
+            <div class="kpi-value">[Total Revenue]</div>
+            <div class="kpi-meta">Formula: <code>SUM(Fact_Sales[Net_Revenue])</code></div>
+            <div class="kpi-delta">[YoY % — Pending Export]</div>
+          </div>
+
+          <div class="kpi-card reveal">
+            <div class="kpi-top">
+              <span class="kpi-label">Net Profit</span>
+              <span class="placeholder-badge">Placeholder</span>
+            </div>
+            <div class="kpi-value">[Net Profit]</div>
+            <div class="kpi-meta">Formula: <code>SUM(Fact_Sales[Profit])</code></div>
+            <div class="kpi-delta">[YoY % — Pending Export]</div>
+          </div>
+
+          <div class="kpi-card reveal">
+            <div class="kpi-top">
+              <span class="kpi-label">Profit Margin</span>
+              <span class="placeholder-badge">Placeholder</span>
+            </div>
+            <div class="kpi-value">[Profit Margin %]</div>
+            <div class="kpi-meta">Formula: <code>DIVIDE([Net Profit], [Total Revenue])</code></div>
+            <div class="kpi-delta">[Margin Variance — Pending]</div>
+          </div>
+
+          <div class="kpi-card reveal">
+            <div class="kpi-top">
+              <span class="kpi-label">Total Orders</span>
+              <span class="placeholder-badge">Placeholder</span>
+            </div>
+            <div class="kpi-value">[Total Orders]</div>
+            <div class="kpi-meta">Formula: <code>DISTINCTCOUNT(Fact_Sales[Order_ID])</code></div>
+            <div class="kpi-delta">[AOV — Pending Export]</div>
+          </div>
+
+          <div class="kpi-card reveal">
+            <div class="kpi-top">
+              <span class="kpi-label">Units Sold</span>
+              <span class="placeholder-badge">Placeholder</span>
+            </div>
+            <div class="kpi-value">[Units Sold]</div>
+            <div class="kpi-meta">Formula: <code>SUM(Fact_Sales[Quantity])</code></div>
+            <div class="kpi-delta">[Units / Order — Pending]</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. DASHBOARD PREVIEW SECTION (SCREENSHOT PLACEHOLDERS) -->
+    <section class="section" id="preview">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">03 / Report Views</span>
+          <h2>Interactive Dashboard Preview</h2>
+          <p class="section-desc">
+            Switch between the planned Power BI report pages below. Drop your exported high-resolution PNG screenshots into <code>assets/screenshots/</code> and replace these placeholder frames before publishing.
+          </p>
+        </div>
+
+        <div class="preview-shell reveal">
+          <div class="preview-toolbar">
+            <div class="preview-tabs" role="tablist" aria-label="Power BI Report Pages">
+              <button type="button" class="preview-tab active" data-view="overview" role="tab" aria-selected="true">Page 1: Executive Overview</button>
+              <button type="button" class="preview-tab" data-view="products" role="tab" aria-selected="false">Page 2: Product &amp; Discount Margin</button>
+              <button type="button" class="preview-tab" data-view="regional" role="tab" aria-selected="false">Page 3: Regional &amp; Customer Insights</button>
+            </div>
+            <button type="button" class="btn btn-sm btn-secondary" id="openLightboxBtn">Expand Spec</button>
+          </div>
+
+          <div class="preview-stage" id="previewStage">
+            <div class="screenshot-placeholder">
+              <div class="placeholder-chrome">
+                <span class="dot red"></span><span class="dot amber"></span><span class="dot green"></span>
+                <span class="chrome-title" id="previewFileLabel">assets/screenshots/page1-executive-overview.png</span>
+              </div>
+              <div class="placeholder-body">
+                <div class="placeholder-icon" aria-hidden="true">
+                  <svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <rect x="3" y="3" width="18" height="18" rx="2" />
+                    <path d="M3 16l5-5 4 4 3-3 6 6" />
+                    <circle cx="8.5" cy="8.5" r="1.5" />
+                  </svg>
+                </div>
+                <span class="placeholder-badge large">Screenshot Placeholder</span>
+                <h3 id="previewTitle">Executive Overview — Power BI Report Page 1</h3>
+                <p id="previewCaption">Replace with your Power BI Desktop export showing KPI cards, monthly revenue &amp; profit trend, regional performance bar chart, and sales channel mix.</p>
+                <div class="wireframe-tags" id="previewTags">
+                  <span>KPI Summary Cards</span>
+                  <span>Monthly Revenue &amp; Profit Trend</span>
+                  <span>Regional Bar Chart</span>
+                  <span>Channel Mix Donut</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. DATA PREPARATION & TRANSFORMATION PROCESS -->
+    <section class="section section-alt" id="etl">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">04 / ETL Pipeline</span>
+          <h2>Data Preparation &amp; Transformation Process</h2>
+          <p class="section-desc">
+            A structured Excel-to-Power BI preparation workflow built in Power Query (M) to guarantee clean data types, referential integrity, and fast VertiPaq compression.
+          </p>
+        </div>
+
+        <div class="pipeline-grid">
+          <div class="pipeline-step reveal">
+            <span class="step-num">STEP 01</span>
+            <h3>Excel Source Ingestion</h3>
+            <p>Connected Power BI Desktop to the multi-sheet Excel sales workbook containing transactional order rows and master lookup tables (Products, Customers, Regions, Calendar).</p>
+          </div>
+          <div class="pipeline-step reveal">
+            <span class="step-num">STEP 02</span>
+            <h3>Power Query (M) Cleaning</h3>
+            <p>Promoted headers, enforced explicit column data types (Date, Currency, Percentage, Whole Number), trimmed text fields, and filtered null or duplicate order keys.</p>
+          </div>
+          <div class="pipeline-step reveal">
+            <span class="step-num">STEP 03</span>
+            <h3>Feature Engineering</h3>
+            <p>Created analytical helper columns including <code>Discount_Tier</code> brackets, <code>Shipping_Days</code> lead times, and fiscal calendar attributes (<code>Quarter</code>, <code>Year_Month</code>, <code>Fiscal_Year</code>).</p>
+          </div>
+          <div class="pipeline-step reveal">
+            <span class="step-num">STEP 04</span>
+            <h3>Star Schema Modeling</h3>
+            <p>Configured 1-to-Many (<code>1:*</code>) single-direction relationships from <code>Dim_Calendar</code>, <code>Dim_Products</code>, <code>Dim_Customers</code>, and <code>Dim_Regions</code> into central <code>Fact_Sales</code>.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. DAX MEASURES & ANALYTICAL INSIGHTS -->
+    <section class="section" id="dax">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">05 / Modeling &amp; Findings</span>
+          <h2>DAX Measures &amp; Analytical Insights</h2>
+          <p class="section-desc">
+            Reusable DAX measure definitions organized in a dedicated <code>_Measures</code> table, paired with structured insight cards ready to be populated with real findings from your completed dashboard.
+          </p>
+        </div>
+
+        <!-- DAX Measures Filter & Code Grid -->
+        <div class="dax-controls reveal">
+          <button type="button" class="filter-chip active" data-dax="all">All Measures</button>
+          <button type="button" class="filter-chip" data-dax="core">Core KPIs</button>
+          <button type="button" class="filter-chip" data-dax="time">Time Intelligence</button>
+          <button type="button" class="filter-chip" data-dax="margin">Margin &amp; Ranking</button>
+        </div>
+
+        <div class="dax-grid" id="daxGrid"></div>
+
+        <!-- Analytical Insights Placeholders -->
+        <div class="insights-block reveal">
+          <div class="insights-header">
+            <h3>Analytical Insights</h3>
+            <span class="placeholder-badge">Awaiting Real Dashboard Results</span>
+          </div>
+          <div class="insights-grid">
+            <article class="insight-card">
+              <span class="insight-tag">Insight Placeholder 01</span>
+              <h4>[Regional Revenue &amp; Target Attainment Finding]</h4>
+              <p>[Insert verified observation after running the Power BI model—e.g., which region led net revenue, how each market performed against its target, and where variance occurred.]</p>
+            </article>
+            <article class="insight-card">
+              <span class="insight-tag">Insight Placeholder 02</span>
+              <h4>[Discount Tier &amp; Margin Erosion Finding]</h4>
+              <p>[Insert verified comparison of Profit Margin % across full-price, standard-discount, and high-discount orders once calculated from your actual dataset.]</p>
+            </article>
+            <article class="insight-card">
+              <span class="insight-tag">Insight Placeholder 03</span>
+              <h4>[Category &amp; Product Mix Finding]</h4>
+              <p>[Insert verified breakdown of top revenue-generating categories versus highest profit-margin categories and top-performing SKUs.]</p>
+            </article>
+            <article class="insight-card">
+              <span class="insight-tag">Insight Placeholder 04</span>
+              <h4>[YoY Growth &amp; Seasonality Finding]</h4>
+              <p>[Insert verified year-over-year revenue/profit trajectory, peak seasonal months, and channel growth shifts observed in the final Power BI visuals.]</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. TECHNOLOGIES USED -->
+    <section class="section section-alt" id="tech">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">06 / Stack</span>
+          <h2>Technologies Used</h2>
+          <p class="section-desc">Core Business Intelligence and data modeling tools powering the end-to-end analytics workflow.</p>
+        </div>
+
+        <div class="tech-grid">
+          <div class="tech-card reveal">
+            <div class="tech-badge gold">PBI</div>
+            <h3>Microsoft Power BI</h3>
+            <p>Interactive multi-page report design, Star Schema relationship modeling, custom JSON theming, cross-filtering slicers, and executive KPI cards.</p>
+          </div>
+          <div class="tech-card reveal">
+            <div class="tech-badge emerald">XLS</div>
+            <h3>Microsoft Excel</h3>
+            <p>Structured multi-table source workbook (Fact &amp; Dimension sheets) plus an automated formula-driven QA reconciliation sheet to validate Power BI totals.</p>
+          </div>
+          <div class="tech-card reveal">
+            <div class="tech-badge cyan">PQ</div>
+            <h3>Power Query (M)</h3>
+            <p>Repeatable ETL scripts for schema validation, data type enforcement, null handling, and conditional feature engineering prior to model load.</p>
+          </div>
+          <div class="tech-card reveal">
+            <div class="tech-badge indigo">DAX</div>
+            <h3>DAX (Data Analysis Expressions)</h3>
+            <p>Dynamic calculation engine for profit margins, Average Order Value, Time Intelligence (<code>TOTALYTD</code>, <code>SAMEPERIODLASTYEAR</code>), and <code>RANKX</code> market rankings.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. GITHUB REPOSITORY CTA -->
+    <section class="section cta-section">
+      <div class="container">
+        <div class="cta-box reveal">
+          <div>
+            <span class="section-tag">Open Source Repository</span>
+            <h2>Explore the Complete Project on GitHub</h2>
+            <p>Access the Star Schema Excel workbook, Power Query (M) scripts, DAX measures library, custom Power BI theme JSON, and full documentation.</p>
+          </div>
+          <a href="https://github.com/DivyarajsinhA/retail-sales-profitability-analytics" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.69-3.88-1.54-3.88-1.54-.52-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 5.8 0c2.21-1.49 3.18-1.18 3.18-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.42-2.69 5.39-5.25 5.68.41.36.78 1.06.78 2.14 0 1.54-.01 2.79-.01 3.17 0 .31.21.68.8.56A11.51 11.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
+            <span>Open GitHub Repository</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>&copy; 2026 Divyarajsinh Thakor &bull; Retail Sales &amp; Profitability Analytics Portfolio</p>
+      <a href="#top" class="back-top">Back to top &uarr;</a>
+    </div>
+  </footer>
+
+  <!-- Lightbox Modal for Screenshot Placeholder Spec -->
+  <div class="modal-backdrop" id="lightboxModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 id="modalTitle">Dashboard Screenshot Specification</h3>
+        <button type="button" class="modal-close" id="closeLightboxBtn" aria-label="Close modal">&times;</button>
+      </div>
+      <div class="modal-body" id="modalBody"></div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast" role="status" aria-live="polite">Copied DAX measure to clipboard</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
